@@ -57,14 +57,16 @@ def parse_prefix_expression(input_string, token_delimiter=' '):
 
         # TODO error handling
         except EmptyExpression:
-            print('Statement {0} is empty - passing'.format(z))
+            print('Found empty expression in statement {0} - passing'.format(z))
             continue
         except ImproperExpression:
-            print('Statement {0} does not adhere to proper prefix notation syntax - passing'.format(z))
+            print('Found improper expression syntax for statement {0} - passing'.format(z))
             continue
         except ZeroDivisionError:
-            print('Attempted division by zero for statement {0} - passing'.format(z))
+            print('Encountered division by zero in statement {0} - passing'.format(z))
             continue
+        except ValueError:
+            print('Found unexpected character in statement {0} - passing'.format(z))
 
 
 if __name__ == '__main__':
