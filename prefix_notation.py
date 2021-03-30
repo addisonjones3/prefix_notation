@@ -65,9 +65,6 @@ def parse_prefix_expression(input_string, token_delimiter=' '):
         except ZeroDivisionError:
             print('Attempted division by zero for statement {0} - passing'.format(z))
             continue
-        except ValueError as ve:
-            # print('Invalid character {0}'.format(c))
-            continue
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-from rockerbox_pref_parse import parse_prefix_expression
+from prefix_notation import parse_prefix_expression
 
 t0 = '1'  # 1
 t1 = '* + 2 3 4'  # 20
@@ -44,12 +44,3 @@ t_tab_delim = '+\t1\t2'
 # parse_prefix_expression(comb)
 parse_prefix_expression(t_multi_space)
 parse_prefix_expression(t_tab_delim, token_delimiter='\t')
-"""
-~3 - 4 hours to research what prefix expressions are (without looking for solutions)
-and write the solution.
-
-~1 hour tweaking for command line arguments. I'm not especially experienced
-with passing to command line, so that took a little bit of work. 
-
-~2 hours making it more resilient which was likely huge overkill
-"""

@@ -24,13 +24,13 @@ The evaluation result will always be an integer >= 0.
 The number of the test cases is <= 40.
 
 TO RUN:  
-* Import parse_prefix_expression() from rockerbox_pref_parse.py
+* Import parse_prefix_expression() from prefix_notation.py
     * Pass function a python string with new lines split by '\n'  
       character
     * Optional argument for changing token delimiter. Pass as string
     * Ex: parse_prefix_expression('+ 9 * 2 6')
     * Ex: parse_prefix_expression('1\n* + 2 3 4\n+ 9 * 2 6\n* + 1 + + 2 3 4 + 5 + 6 7p \n/ -3 4\n- -1 1')  
-    * Ex: parse_prefix_expression('+\t9\t*\t2\t6')
+    * Ex: parse_prefix_expression('+\t9\t*\t2\t6', token_delimiter='\t')
 
 * Execute from command line
     * Pass string encased in single quotes, preceded by $, splitting  
